@@ -29,7 +29,7 @@ ssh yourSUNetID@sherlock.stanford.edu
 ```
 ### File Management
 
-Once you're on Sherlock, you'll want to have access to these files:
+3. Once you're on Sherlock, you'll want to have access to these files:
 ```bash
 git clone https://github.com/bcritt1/pos_ner_python_nltk.git
 ```
@@ -38,13 +38,13 @@ This will create a directory in your home space on Sherlock called "pos_ner_pyth
 
 Once you have the directory--you can ```ls``` to verify it's there.
 
-3. Let's also make three directories for the outputs of our process:
+4. Let's also make three directories for the outputs of our process:
 ```
 mkdir out err /scratch/users/$USER/outputs
 ```
 ### Running Code
 
-4. Now, let's move into our new directory
+5. Now, let's move into our new directory
 ```
 cd nltk
 ```
