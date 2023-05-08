@@ -6,9 +6,9 @@ This repo contains two simple files that execute [nltk's](https://www.nltk.org/i
 
 The files consist of:
 
-1. [nltkNER.py](/scripts/pos_ner/python/nltk/nltkNER.py): Runs ntlk on a corpus, outputing a .csv file with 
+1. [nltkNER.py](nltkNER.py): Runs ntlk on a corpus, outputing a .csv file with 
 POS and .json file with NER for all the words in your corpus.
-2. [nltkNER.sbatch](/scripts/pos_ner/python/nltk/nltkNER.sbatch): Creates a batch job for nltkNER.py.
+2. [nltkNER.sbatch](nltkNER.sbatch): Creates a batch job for nltkNER.py.
 
 ## Usage instructions
 
@@ -29,21 +29,14 @@ ssh yourSUNetID@sherlock.stanford.edu
 ```
 ### File Management
 
-3. Once you are logged in, you'll want to have access to these files, which you can get with a couple simple commands. First, we need to install a program called subversion:
+Once you're on Sherlock, you'll want to have access to these files:
+```bash
+git clone https://github.com/bcritt1/pos_ner_python_nltk.git
 ```
-ml system subversion
-```
-and use that program to download the files:
-```
-svn export https://github.com/bcritt1/H-S-Documentation/trunk/scripts/pos_ner/python/nltk/ nltk
-```
-This will create a directory in your home space on Sherlock called "nltk" with all the files in this repository.
 
-Once you have the directory--you can ```ls``` to verify it's there--
-```
-ml purge
-```
-to remove subversion from your environment. 
+This will create a directory in your home space on Sherlock called "pos_ner_python_nltk" with all the files in this repository.
+
+Once you have the directory--you can ```ls``` to verify it's there.
 
 3. Let's also make three directories for the outputs of our process:
 ```
