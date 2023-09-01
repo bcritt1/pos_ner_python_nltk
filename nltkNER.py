@@ -15,12 +15,13 @@ else:
 
 # download language models in nltk
 import nltk
+nltk.download('all')
 from nltk.tokenize import word_tokenize
 
 # Read in a directory of txt files as the corpus using the os library.
 
 user = os.getenv('USER')
-corpusdir = '/scratch/users/{}/corpus/'.format(user)
+corpusdir = '/farmshare/learning/data/emerson/'
 corpus = []
 for infile in os.listdir(corpusdir):
     with open(corpusdir+infile, errors='ignore') as fin:
@@ -48,4 +49,3 @@ df.to_csv('/scratch/users/{}/outputs/pos.csv'.format(user))
 # because of uneven data structure, better to export ne as json
 with open('/scratch/users/{}/outputs/data.json'.format(user), 'w', encoding='utf-8') as f:
     json.dump(ne, f, ensure_ascii=False, indent=4)
-
